@@ -1,0 +1,86 @@
+.bg-text(@prefix){
+	@color: @@prefix;
+	.text-@{prefix} {
+		color: @color;
+	}
+	.bg-@{prefix}{
+		background-color: @color;
+	}
+}
+
+/* flat ui colors */
+@teal: #1abc9c;
+@teal-dark: #16a085;
+@green:  #2ecc71;
+@green-dark: #27ae60;
+@blue: #3498db;
+@blue-dark: #2980b9;
+@purple: #9b59b6;
+@purple-dark: #8e44ad;
+@slate: #34495e;
+@slate-dark: #2c3e50;
+@yellow: #f1c40f;
+@yellow-dark: #f39c12;
+@orange: #e67e22;
+@orange-dark: #d35400;
+@red: #e74c3c;
+@red-dark: #c0392b;
+
+.bg-text(~"teal");
+.bg-text(~"teal-dark");
+.bg-text(~"green");
+.bg-text(~"green-dark");
+.bg-text(~"blue");
+.bg-text(~"blue-dark");
+.bg-text(~"purple");
+.bg-text(~"purple-dark");
+.bg-text(~"slate");
+.bg-text(~"slate-dark");
+.bg-text(~"yellow");
+.bg-text(~"yellow-dark");
+.bg-text(~"orange");
+.bg-text(~"orange-dark");
+.bg-text(~"red");
+.bg-text(~"red-dark");
+
+
+/* Shades of Grey */
+@grey-lightest: lighten(#000, 87.5%);
+@grey-lighter: lighten(#000, 75%);
+@grey-light: lighten(#000, 62.5%);
+@grey: lighten(#000, 50%);
+@grey-dark: lighten(#000, 37.5%);
+@grey-darker: lighten(#000, 25%);
+@grey-darkest: lighten(#000, 12.5%);
+
+
+.bg-text(~"grey-lightest");
+.bg-text(~"grey-lighter");
+.bg-text(~"grey-light");
+.bg-text(~"grey");
+.bg-text(~"grey-dark");
+.bg-text(~"grey-darker");
+.bg-text(~"grey-darkest");
+
+
+/* Black, White and transparent */
+.text-white{
+	color: #fff;
+}
+.text-black{
+	color: #000;
+}
+.text-clear{
+	color: transparent;
+}
+
+.bg-white{
+	background-color: #fff;
+}
+.bg-black{
+	background-color: #000;
+}
+.bg-clear{
+	background-color: transparent;
+}
+

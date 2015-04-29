@@ -1,0 +1,65 @@
+@body-color: #333;
+@body-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+.text-default{
+	color: @body-color;
+	font-family: @body-font;
+}
+
+/* Remove Styles */
+.no-border{
+	border: 0;
+}
+.no-underline{
+	text-decoration: none;
+}
+
+/* Text Alignment */
+.text-left{
+	text-align: left !important;
+}
+.text-right{
+	text-align: right !important;
+}
+.text-center{
+	text-align: center !important;
+}
+
+/* Text Casing */
+.text-upper{
+	text-transform: uppercase;
+}
+.text-lower{
+	text-transform: lowercase;
+}
+.text-capital{
+	text-transform: capitalize;
+}
+
+/* Text Weight & Variants */
+.text-italic{
+	font-style: italic;
+}
+.text-bold{
+	font-weight: bold;
+}
+.text-normal{
+	font-weight: normal;
+}
+
+/* Block Styles */
+.block-p{
+	margin: 1em 0;
+}
+
+/* Overflow Styles */
+// TODO: address browser differences (show/hide scrolls)
+.overflow-hidden{
+	overflow: hidden;
+}
+.overflow-scroll{
+	overflow: scroll;
+}
+.overflow-auto{
+	overflow: auto;
+}

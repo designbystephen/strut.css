@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Unit Test</title>
+
+	<link rel="stylesheet" type="text/css" href="css/strut.css">
+	<link href="http://fonts.googleapis.com/css?family=Courgette" rel="stylesheet" type="text/css">
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="page-header" class="container bg-orange-dark text-white">
+		<header>
+			<h1>
+				Strut.less
+				<span class="subtitle text-normal">A Lightweight Design Framework</span>
+			</h1>
+		</header>
+	</div>
+	<div class="container">
+		<main role="main" id="page-content">
+			<div class="row">
+				<div class="col-3">
+					<div class="bg-grey-lightest text-grey-darker no-underline">
+						<ul id="toc">
+							<li><a href="#overview">Overview</a></li>
+							<li><a href="#grid">Grid</a></li>
+							<li>
+								<a href="#responsive">Responsive</a>
+								<ul>
+									<li><a href="#grid-collapse">Grid Collapse</a></li>
+									<li><a href="#media-only">Mixed Media Classes</a></li>
+									<li><a href="#media-only">Media Specific Classes</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#colors">Colors</a>
+								<ul>
+									<li><a href="#roygbv">ROYGBV</a></li>
+									<li><a href="#grey">Shades of Grey</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#util">Components</a>
+								<ul>
+									<li><a href="#align">Text Alignment</a></li>
+									<li><a href="#styles">Text Styles</a></li>
+									<li><a href="#overflow">Overflow</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-9" id="page-document">
+					<div id="overview" class="blurb">
+						<section>
+							<h2>Overview</h2>
+							<p>
+								The strut.less project is an attempt to bring everything we love about modern responsive design under one roof.  The goal is to provide simple structures for prototyping and designing great content, with as little overhead as possible. Prefering not to predefine elements for you, strut gives you classes and mix-ins that are re-usable throughout any of your web-design projects.
+
+								<br /><br />
+								This framework uses <a href="http://necolas.github.io/normalize.css/">normalize.css</a> to give us a baseline across all browsers.
+							</p>
+						</section>
+					</div>
+
+					<div id="grid" class="blurb">
+						<section>
+							<h2>Grid System</h2>
+							<p>
+								The grid system is based off a 12 column layout and will resize to fit the container it is in. Each column div must be placed in a row.  It is optional to place it into a conatainer but the gutter padding on the outside won"t display unless you do.
+								<br /><br />
+								Each grid layout can be made to be responsive by using additional classes like the ones here <a href="#grid-collapse">grid collapse</a>. Columns that are not set to collapse will have their overflow hidden by default
+							</p>
+							<div class="demo block-p">
+								<div class="row">
+									<div class="col-6">
+										<div class="node bg-teal">
+											.col-6
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="node bg-teal">
+											.col-6
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-4">
+										<div class="node bg-green">
+											.col-4
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="node bg-green">
+											.col-4
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="node bg-green">
+											.col-4
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-3">
+										<div class="node bg-blue">
+											.col-3
+										</div>
+									</div>
+									<div class="col-9">
+										<div class="node bg-blue">
+											.col-9
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-1">
+										<div class="node bg-purple">
+											.col-12
+										</div>
+									</div>
+									<div class="col-1">
+										<div class="node bg-purple">
+											.col-12
+										</div>
+									</div>
+									<div class="col-1">
+										<div class="node bg-purple">
+											.col-12
+										</div>
+									</div>
+									<div class="col-1">
+										<div class="node bg-purple">
+											.col-12
+										</div>
+									</div>
+									<div class="col-1">
+										<div class="node bg-purple">
+											.col-12
+										</div>
+									</div>
+									<div class="col-1">
+										<div class="node bg-purple">
+											.col-12
+										</div>
+									</div>
+									<div class="col-1">
+										<div class="node bg-purple">
+											.col-12
+										</div>
+									</div>
+									<div class="col-1">
+										<div class="node bg-purple">
+											.col-12
+										</div>
+									</div>
+									<div class="col-1">
+										<div class="node bg-purple">
+											.col-12
+										</div>
+									</div>
+									<div class="col-1">
+										<div class="node bg-purple">
+											.col-12
+										</div>
+									</div>
+									<div class="col-1">
+										<div class="node bg-purple">
+											.col-12
+										</div>
+									</div>
+									<div class="col-1">
+										<div class="node bg-purple">
+											.col-12
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+
+					<div id="responsive" class="blurb">
+						<section>
+							<h2>Responsive</h2>
+							<p>
+								Responsive content changes depending on your screen size to provide a better user experience.  This is central to this project and the following classes and mix-ins provide support for well defined media queries.
+							</p>
+							<div class="blurb">
+								<h3>Media Queries and Mix-ins</h3>
+								<p>
+									These device sizes are based on the standards set by <a href="http://getbootstrap.com">getbootstrap.com</a>.
+									TODO: a table of device sizes
+								</p>
+								<div class="demo block-p">
+									<button class="phone disabled">.phone()</button>
+									<button class="tablet disabled">.tablet()</button>
+									<button class="large disabled">.large()</button>
+									<button class="xlarge disabled">.xlarge()</button>
+									<br />
+									<button class="mobile disabled">.mobile()</button>
+									<button class="desktop disabled">.desktop()</button>
+								</div>
+							</div>
+							<div class="blurb">
+								<h3>Targeted Media</h3>
+								<p>
+									These classes can be used to show elements on specific screen sizes using built-in media queries. 
+								</p>
+								<div class="demo block-p">
+									<button class="phone-only bg-blue text-white">.phone-only</button>
+									<button class="tablet-only bg-blue text-white">.tablet-only</button>
+									<button class="large-only bg-blue text-white">.large-only</button>
+									<button class="xlarge-only bg-blue text-white">.xlarge-only</button>
+									<button class="desktop-only bg-blue text-white">.desktop-only</button>
+									<button class="mobile-only bg-blue text-white">.mobile-only</button>
+								</div>
+							</div>
+							<div id="grid-collapse" class="blurb">
+								<h3>Grid Collapse</h3>
+								<div class="demo block-p">
+									<div class="row collapse-phone">
+										<div class="col-4">
+											<div class="node bg-slate">
+												.col-4
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="node bg-slate">
+												.col-4
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="node bg-slate">
+												.col-4
+											</div>
+										</div>
+									</div>
+									<div class="row collapse-tablet">
+										<div class="col-4">
+											<div class="node bg-yellow">
+												.col-4
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="node bg-yellow">
+												.col-4
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="node bg-yellow">
+												.col-4
+											</div>
+										</div>
+									</div>
+									<div class="row collapse-large">
+										<div class="col-4">
+											<div class="node bg-orange">
+												.col-4
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="node bg-orange">
+												.col-4
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="node bg-orange">
+												.col-4
+											</div>
+										</div>
+									</div>
+									<div class="row collapse-mobile">
+										<div class="col-4">
+											<div class="node bg-red">
+												.col-4
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="node bg-red">
+												.col-4
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="node bg-red">
+												.col-4
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+
+					<div id="colors" class="blurb">
+						<section>
+							<h2>Colors</h2>
+							<p>
+								Like elsewhere in Strut.less colors in this section can be applied using to the text and the background using the suffix "text-" and "bg-".
+							</p>
+							<div id="roygbiv" class="blurb">
+								<h3>ROYGBIV</h3>
+								<p>
+									The default colors in this framework are built around the widely used colors at
+									<a href="http://flatuicolors.com/">flatuicolors.com</a>.  The color names have been
+									standardized so they are easy to use and remember as class names and LESS variables.
+								</p>
+								<div class="demo block-p">
+									<button class="bg-red text-white">.bg-red</button>
+									<button class="bg-red-dark text-white">.bg-red-dark</button>
+									<button class="bg-orange text-white">.bg-orange</button>
+									<button class="bg-orange-dark text-white">.bg-orange-dark</button>
+									<button class="bg-yellow text-white">.bg-yellow</button>
+									<button class="bg-yellow-dark text-white">.bg-yellow-dark</button>
+									<button class="bg-green text-white">.bg-green</button>
+									<button class="bg-green-dark text-white">.bg-green-dark</button>
+									<button class="bg-teal text-white">.bg-teal</button>
+									<button class="bg-teal-dark text-white">.bg-teal-dark</button>
+									<button class="bg-blue text-white">.bg-blue</button>
+									<button class="bg-blue-dark text-white">.bg-blue-dark</button>
+									<button class="bg-purple text-white">.bg-purple</button>
+									<button class="bg-purple-dark text-white">.bg-purple-dark</button>
+									<button class="bg-slate text-white">.bg-slate</button>
+									<button class="bg-slate-dark text-white">.bg-slate-dark</button>
+								</div>
+							</div>
+
+							<div id="grey" class="blurb">
+								<h3>Shades of Grey</h3>
+								<p>
+									These greys give designers a wide range of greys in a simple to use format, similar to the ROYGBIV colors. Each grey is 12.5% darker than the last and scale from white to black.
+								</p>
+								<div class="demo block-p">
+									<button class="bg-grey-lightest text-black">.bg-grey-lightest</button>
+									<button class="bg-grey-lighter text-black">.bg-grey-lighter</button>
+									<button class="bg-grey-light text-black">.bg-grey-light</button>
+									<button class="bg-grey text-black">.bg-grey</button>
+									<button class="bg-grey-dark text-white">.bg-grey-dark</button>
+									<button class="bg-grey-darker text-white">.bg-grey-darker</button>
+									<button class="bg-grey-darkest text-white">.bg-grey-darkest</button>
+								</div>
+							</div>
+
+							<div id="blackwhite" class="blurb">
+								<h3>Black and White</h3>
+								<div class="demo block-p">
+									<button class="bg-black text-white">.bg-black .text-white</button>
+									<button class="bg-white text-black">.bg-white .text-black</button>
+								</div>
+							</div>
+						</section>
+					</div>
+
+					<div id="util" class="blurb">
+						<section>
+							<h2>Utility</h2>
+							<p>
+								These classes and mix-ins provide some essential styles that you would otherwise need to define in your own stylesheets or place inline (GASP!) for those one-offs.
+							</p>
+							<div id="align" class="blurb">
+								<h3>Text Alignment</h3>
+								<div class="demo block-p">
+									<div class="bg-grey-lightest text-left text-black">.text-left</div >
+									<div class="bg-grey-lightest text-center text-black">.text-center</div >
+									<div class="bg-grey-lightest text-right text-black">.text-right</div >
+								</div>
+							</div>
+							<div id="case" class="blurb">
+								<h3>Text Case</h3>
+								<div class="demo block-p">
+									<button class="bg-grey-lightest text-upper">.text-upper</button>
+									<button class="bg-grey-lightest text-lower">.text-lower</button>
+									<button class="bg-grey-lightest text-capital">.text-capital</button>
+								</div>
+							</div>
+							<div id="variants" class="blurb">
+								<h3>Text Weight &amp; Variants</h3>
+								<div class="demo block-p">
+									<button class="bg-grey-lightest text-italic">.text-italic</button>
+									<button class="bg-grey-lightest text-bold">.text-bold</button>
+									<button class="bg-grey-lightest text-normal">.text-normal</button>
+								</div>
+							</div>
+							<div id="overflow" class="blurb">
+								<h3>Overflow</h3>
+								<div class="demo block-p text-white">
+									<div class="bg-blue overflow-hidden">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies eu elit ut egestas. Morbi molestie elit quis ullamcorper varius. Suspendisse mollis congue nibh vitae efficitur. In urna justo, mollis vel diam ut, bibendum mollis velit. Sed lacinia a diam ac convallis. Sed dignissim urna nunc, at finibus sem ullamcorper quis. Etiam accumsan euismod luctus. Cras eleifend sem at sapien accumsan eleifend. In aliquam eros a elementum vulputate.
+
+										Etiam bibendum, nulla sit amet dignissim molestie, ligula ligula congue ex, ac accumsan urna metus in quam. Duis diam enim, malesuada in ex et, tincidunt consequat nisl. Proin et eros lectus. Nullam ut luctus massa, ac ultrices sapien. Cras eros nunc, bibendum ut porttitor nec, feugiat in lorem. Etiam laoreet elit non vestibulum interdum. Proin sed nulla consectetur, eleifend nisl in, ullamcorper sapien.
+									</div>
+									<div class="bg-teal overflow-scroll">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies eu elit ut egestas. Morbi molestie elit quis ullamcorper varius. Suspendisse mollis congue nibh vitae efficitur. In urna justo, mollis vel diam ut, bibendum mollis velit. Sed lacinia a diam ac convallis. Sed dignissim urna nunc, at finibus sem ullamcorper quis. Etiam accumsan euismod luctus. Cras eleifend sem at sapien accumsan eleifend. In aliquam eros a elementum vulputate.
+
+										Etiam bibendum, nulla sit amet dignissim molestie, ligula ligula congue ex, ac accumsan urna metus in quam. Duis diam enim, malesuada in ex et, tincidunt consequat nisl. Proin et eros lectus. Nullam ut luctus massa, ac ultrices sapien. Cras eros nunc, bibendum ut porttitor nec, feugiat in lorem. Etiam laoreet elit non vestibulum interdum. Proin sed nulla consectetur, eleifend nisl in, ullamcorper sapien.
+									</div>
+									<div class="bg-green overflow-auto">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies eu elit ut egestas. Morbi molestie elit quis ullamcorper varius. Suspendisse mollis congue nibh vitae efficitur. In urna justo, mollis vel diam ut, bibendum mollis velit. Sed lacinia a diam ac convallis. Sed dignissim urna nunc, at finibus sem ullamcorper quis. Etiam accumsan euismod luctus. Cras eleifend sem at sapien accumsan eleifend. In aliquam eros a elementum vulputate.
+
+										Etiam bibendum, nulla sit amet dignissim molestie, ligula ligula congue ex, ac accumsan urna metus in quam. Duis diam enim, malesuada in ex et, tincidunt consequat nisl. Proin et eros lectus. Nullam ut luctus massa, ac ultrices sapien. Cras eros nunc, bibendum ut porttitor nec, feugiat in lorem. Etiam laoreet elit non vestibulum interdum. Proin sed nulla consectetur, eleifend nisl in, ullamcorper sapien.
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+
+				</div>
+			</div>
+		</main>
+	</div>
+	<script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("button:not([type])").on("click", function(e){
+			event.preventDefault();
+			return false;
+		});
+	</script>
+</body>
+</html>
